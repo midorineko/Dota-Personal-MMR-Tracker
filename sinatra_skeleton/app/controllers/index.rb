@@ -19,6 +19,10 @@ post '/hero_ability/stats/:id/add/commit' do
   @new_stats = Stat.create(params[:post])
   @add_hero_stats.stats << @new_stats
   @combined_hero = Hero.find_by_id(params[:id])
+  @new_side = Side.create(side: params[:side])
+  @team = Team.create
+  @team.heros << @combined_hero
+  @team.sides << @new_side
   @combined_hero_stats = @combined_hero.stats.last
   erb :added_stats
 end
