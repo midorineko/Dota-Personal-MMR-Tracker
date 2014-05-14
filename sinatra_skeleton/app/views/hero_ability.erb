@@ -1,5 +1,8 @@
 <div class="container">
-  <h2> <a href= "http://www.dota2.com/hero/<%= @hero_for_abilities.name %>">Abilities Extended <%= @hero_for_abilities.name %></a></h2>
+  <h2> <a href= "http://www.dota2.com/hero/<%= @hero_for_abilities.name %>">Extended Hero Information <%= @hero_for_abilities.name %></a></h2>
+<form method="get" action="stats/<%= @hero_for_abilities.id %>/add">
+    <input type="submit" value="Add Game Stats">
+</form>
 
   <p><%= @hero_for_abilities.skill1 %></p><br>
   <p><%= @hero_for_abilities.skill2 %></p><br>
