@@ -1,0 +1,6 @@
+<div class="container">
+  <h1>DataBase In Training</h1>
+  <% @hero_table.each do |hero| %>
+  <a href="hero_ability/<%= hero.id %>"><%= hero.name %></a><br>
+  <% end %>
+</div>

@@ -1,0 +1,57 @@
+
+** be rake db:seed
+
+'create' takes charge in saving
+--better to use New and then Save
+
+bang! is usefull to show bigger errors
+
+Band.find(1).musicians << Musician.find(1)
+adam = Musician.new()
+Musician.create(:name => "Sherif")
+
+
+band1 = Band.find(1)
+band1.musicians.build(name: "Steven", instrument: "Saxaphone")
+band1.save
+
+int the class
+Band
+has many: musicians
+has_many :performances
+has_many :concerts, :through => :performances
+
+Musician
+belongs to :band
+
+in the table
+table musicians
+t.cd belongs_to :band
+
+models
+===Concert class===
+has_many :performances
+has_many :bands, :through => performances
+has_many :musicans, :through => :bands
+
+migration
+=====Concert=====
+name
+deaths
+location
+timestamps
+
+=====performance class model=====
+belongs_to :concert
+belongs_to :band
+
+
+===== performance migrate ====
+belongs_to :band
+belongs_to :concert
+
+bundle install
+be rake generate:migration NAME=create_.......s (makes a table)
+be rake generate:model NAME=....... (not plural create class)
+be rake db:create
+be rake db:migrate

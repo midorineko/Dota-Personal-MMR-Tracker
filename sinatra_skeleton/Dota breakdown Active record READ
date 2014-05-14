@@ -1,0 +1,26 @@
+
+
+=====Heroes=====
+Name
+Skill 1
+Skill 2
+Skill 3
+Skill 4
+
+=====Stats=====
+belongs_to Hero
+Kills
+Deaths
+Last Hits
+Denys
+
+====stats migrate======
+t.stats belongs_To hero
+
+=====Matches Model=====
+belongs_to Hero
+belongs_to Performance
+
+=====Matches Migrate=====
+belongs_to Perfomrance
+belongs_to Hero
