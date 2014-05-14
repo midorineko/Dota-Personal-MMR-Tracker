@@ -3,16 +3,26 @@
 <form method="get" action="stats/<%= @hero_for_abilities.id %>/add">
     <input type="submit" value="Add Game Stats">
 </form>
+<br>
+<form method="get" action="stats/<%= @hero_for_abilities.id %>/view">
+    <input type="submit" value="View <%= @hero_for_abilities.name %> Stats">
+</form>
 
-  <p><%= @hero_for_abilities.skill1 %></p><br>
-  <p><%= @hero_for_abilities.skill2 %></p><br>
-  <p><%= @hero_for_abilities.skill3 %></p><br>
-  <p><%= @hero_for_abilities.skill4 %></p><br>
-  <p><%= @hero_for_abilities.skill5 %></p><br>
-  <p><%= @hero_for_abilities.skill6 %></p><br>
-  <p><%= @hero_for_abilities.skill7 %></p><br>
-  <p><%= @hero_for_abilities.skill8 %></p><br>
-  <p><%= @hero_for_abilities.skill9 %></p><br>
+
+  <p><%= @hero_for_abilities.skills[0].skill1 %></p><br>
+  <p><%= @hero_for_abilities.skills[0].skill2 %></p><br>
+  <p><%= @hero_for_abilities.skills[0].skill3 %></p><br>
+  <p><%= @hero_for_abilities.skills[0].skill4 %></p><br>
+  <p><%= @hero_for_abilities.skills[0].skill5 %></p><br>
+  <p><%= @hero_for_abilities.skills[0].skill6 %></p><br>
+  <p><%= @hero_for_abilities.skills[0].skill7 %></p><br>
+  <p><%= @hero_for_abilities.skills[0].skill8 %></p><br>
+  <p><%= @hero_for_abilities.skills[0].skill9 %></p><br>
+  <p><%= @hero_for_abilities.skills[0].skill10 %></p><br>
+  <p><%= @hero_for_abilities.skills[0].skill11 %></p><br>
+  <p><%= @hero_for_abilities.skills[0].skill12 %></p><br>
+  <p><%= @hero_for_abilities.skills[0].skill13 %></p><br>
+
 
 
 </div>

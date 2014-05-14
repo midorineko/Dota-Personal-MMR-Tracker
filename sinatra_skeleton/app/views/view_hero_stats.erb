@@ -1,0 +1,12 @@
+<div class="container">
+<h2>Stats on <%= @indiv_stats.name %></h2>
+<% @indiv_stats.stats.each do |stat| %>
+<br>
+Created at: <%= stat.created_at %><br>
+Kills: <%= stat.kills %><br>
+Deaths: <%= stat.deaths %><br>
+Assists: <%= stat.assists %><br>
+Last Hits: <%= stat.last_hits %><br>
+Denies: <%= stat.denys %><br>
+<% end %>
+</div>

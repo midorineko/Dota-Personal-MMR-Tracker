@@ -22,3 +22,8 @@ post '/hero_ability/stats/:id/add/commit' do
   @combined_hero_stats = @combined_hero.stats.last
   erb :added_stats
 end
+
+get '/hero_ability/stats/:id/view' do
+  @indiv_stats = Hero.find_by_id(params[:id])
+  erb :view_hero_stats
+end
