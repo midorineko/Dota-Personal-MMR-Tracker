@@ -31,3 +31,5 @@ get '/hero_ability/stats/:id/view' do
   @indiv_stats = Hero.find_by_id(params[:id])
   erb :view_hero_stats
 end
+
+#### TEAMS BELONG TO A SINGULARE MATCH!!!! thats the fix!!! omfg omfg omfg omfg omfg
