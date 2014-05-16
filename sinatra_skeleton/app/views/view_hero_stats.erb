@@ -1,5 +1,6 @@
 <div class="container">
 <h2>Stats on <%= @indiv_stats.name %></h2>
+<% counter = 0 %>
 <% @indiv_stats.stats.each do |stat| %><br>
 Played on: <%= stat.created_at %><br>
 Kills: <%= stat.kills %><br>
@@ -7,5 +8,7 @@ Deaths: <%= stat.deaths %><br>
 Assists: <%= stat.assists %><br>
 Last Hits: <%= stat.last_hits %><br>
 Denies: <%= stat.denys %><br>
+Side: <%= @indiv_stats.teams[counter].side.side.capitalize %><br>
+<% counter += 1 %>
 <% end %>
 </div>

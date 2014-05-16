@@ -1,3 +1,4 @@
 class Side < ActiveRecord::Base
-  belongs_to :team
+  has_many :teams
+  has_many :heros, through: :teams
 end
