@@ -7,6 +7,9 @@ class CreateStats < ActiveRecord::Migration
       t.string :assists
       t.string :last_hits
       t.string :denys
+      t.timestamps
     end
   end
 end
+
+#turn to integers

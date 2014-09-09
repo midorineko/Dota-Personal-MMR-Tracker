@@ -1,0 +1,11 @@
+<div class="container">
+<h1>Stats Added Into The <a href="/">DotaBase</a></h1>
+
+  <h1><%= @combined_hero.name %></h1>
+ <h2><em>Played on: <%= @new_side.side.capitalize %></em></h2>
+  <h4>Kills:        <%= @combined_hero_stats.kills %></h4><br>
+  <h4>Deaths:    <%= @combined_hero_stats.deaths %></h4><br>
+  <h4>Assists:    <%= @combined_hero_stats.assists %></h4><br>
+  <h4>Last Hits: <%= @combined_hero_stats.last_hits %></h4><br>
+  <h4>Denies:     <%= @combined_hero_stats.denys %></h4><br>
+</div>
