@@ -1,5 +1,12 @@
 <div class="container">
 <h2>Stats on <%= @indiv_stats.name %></h2>
+<p>Sort by
+<form method="get" action="/">
+ <input type="radio" name="side" value="dire"> Dire<br>
+  <input type="radio" name="side" value="radiant"> Radiant<br>
+  <input type="submit">
+  </form></p>
+
 <% counter = 0 %>
 <% @indiv_stats.stats.each do |stat| %><br>
 Played on: <%= stat.created_at %><br>
